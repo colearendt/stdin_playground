@@ -26,10 +26,10 @@ async def read_stderr(stderr):
 async def write_stdin(stdin, what = sys.stdin):
     print('write_stdin')
     print('waiting for input...')
-    while True:
-        print('reading!')
-        line = what.read(1)
-        print('got text')
+    for line in what:
+        #print('reading!')
+        #line = what.read(1)
+        #print('got text')
         buf = line.encode()
         #buf = line
         print(f'stdin: { buf }')
