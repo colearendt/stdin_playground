@@ -6,4 +6,4 @@ import sys
 
 unbuffered_stdin = os.fdopen(sys.stdin.fileno(), 'rb', buffering=0)
 while True:
-    print(unbuffered_stdin.read(2))
+    print(unbuffered_stdin.read(1))
