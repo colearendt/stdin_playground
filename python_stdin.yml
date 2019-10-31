@@ -1,0 +1,11 @@
+version: '2.3'
+services:
+
+  python_stdin:
+    hostname: python_stdin
+    image: python:buster
+    entrypoint: /usr/local/bin/python3 /stdin_echo.py
+    command: /usr/local/bin/python3 /sha256_base64_stdin.py
+    volumes:
+      - ./sha256_base64_stdin.py:/sha256_base64_stdin.py
+      - ./stdin_echo.py:/stdin_echo.py
